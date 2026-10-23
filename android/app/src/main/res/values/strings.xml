@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Jannat Tech</string>
+    <string name="title_activity_main">Jannat Tech</string>
+    <string name="package_name">com.jannattechbd.app</string>
+    <string name="custom_url_scheme">com.jannattechbd.app</string>
+</resources>

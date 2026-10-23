@@ -1,0 +1,19 @@
+<!doctype html><html lang="bn"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Jannat Tech</title>
+<style>
+html,body{height:100%;margin:0;background:#000d22;color:#e8eef9;font-family:system-ui,-apple-system,"Noto Sans Bengali",sans-serif}
+body{display:grid;place-items:center;text-align:center;padding:24px;box-sizing:border-box}
+img{width:120px;height:120px;border-radius:26px;margin-bottom:18px}
+h1{font-size:20px;margin:0 0 6px}p{margin:0 0 20px;color:#94a3b8}
+button{background:#0a84ff;color:#fff;border:0;border-radius:12px;padding:13px 28px;font-size:16px;font-weight:600}
+.sp{width:34px;height:34px;border:3px solid #1e293b;border-top-color:#0a84ff;border-radius:50%;animation:s .8s linear infinite;margin:0 auto}@keyframes s{to{transform:rotate(360deg)}}
+#off{display:none}
+</style></head><body>
+<div id="load"><img src="icon.png" alt=""><div class="sp"></div></div>
+<div id="off"><img src="icon.png" alt=""><h1>ইন্টারনেট সংযোগ নেই</h1><p>সংযোগ চালু করে আবার চেষ্টা করুন।</p><button id="retry">আবার চেষ্টা করুন</button></div>
+<script>
+var URL_='https://jannattechbd.com/';
+function go(){document.getElementById('off').style.display='none';document.getElementById('load').style.display='block';
+ var c=new AbortController();var t=setTimeout(function(){c.abort()},9000);
+ fetch(URL_,{method:'GET',mode:'no-cors',cache:'no-store',signal:c.signal}).then(function(){clearTimeout(t);location.replace(URL_)}).catch(function(){clearTimeout(t);document.getElementById('load').style.display='none';document.getElementById('off').style.display='block'})}
+document.getElementById('retry').addEventListener('click',go);window.addEventListener('online',go);go();
+</script></body></html>

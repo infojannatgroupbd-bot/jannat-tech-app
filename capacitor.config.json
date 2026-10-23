@@ -1,0 +1,15 @@
+{
+  "appId": "com.jannattechbd.app",
+  "appName": "Jannat Tech",
+  "webDir": "www",
+  "server": {
+    "allowNavigation": ["jannattechbd.com", "*.jannattechbd.com"],
+    "androidScheme": "https"
+  },
+  "ios": { "contentInset": "always", "backgroundColor": "#000d22" },
+  "android": { "backgroundColor": "#000d22" },
+  "plugins": {
+    "SplashScreen": { "launchShowDuration": 1200, "backgroundColor": "#000d22", "showSpinner": false },
+    "StatusBar": { "style": "DARK", "backgroundColor": "#000d22" }
+  }
+}
