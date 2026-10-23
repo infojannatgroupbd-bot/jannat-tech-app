@@ -14,7 +14,7 @@ jobs:
           distribution: temurin
           java-version: 17
       - run: npm install
-      - run: npx cap add android
+      - run: rm -rf android && npx cap add android
       - run: npx capacitor-assets generate --android || true
       - run: cp -r native-res/android/res/. android/app/src/main/res/
       - run: npx cap sync android
